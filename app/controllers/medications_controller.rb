@@ -15,14 +15,14 @@ class MedicationsController < ApplicationController
     end
 
     def create
-        @medication = Medication.new(medication_params(:name, :form, :strength))
+        @medication = Medication.create(medication_params(:name, :form, :strength, :patient_id))
     end
 
     def edit
     end
 
     def update
-        @medication.update(medication_params(:name, :form, :strength))
+        @medication.update(medication_params(:name, :form, :strength, :patient_id))
     end
 
     def destroy

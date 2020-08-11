@@ -15,7 +15,7 @@ class PatientsController < ApplicationController
     end
 
     def create
-        @patient = Patient.new(patient_params(:name, :age))            
+        @patient = Patient.create(patient_params(:name, :age))            
     end
 
     def edit
